@@ -132,6 +132,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M4 2 L32 22 L24 26 L34 44 L20 32 L12 40 Z' fill='%23ff3d3d' stroke='%23111' stroke-width='2'/%3E%3Cpath d='M4 2 L4 16 L18 22 L12 26 Z' fill='%23008cff' stroke='%23111' stroke-width='2'/%3E%3Cpath d='M18 13 L21.2 19.8 L28.5 20.8 L22 25.5 L23.7 32 L18 28.5 L12.3 32 L14 25.5 L7.5 20.8 L14.8 19.8 Z' fill='%23ffeb3b' stroke='%23111' stroke-width='1'/%3E%3C/svg%3E") 0 0, auto;
   }
 
   body {
@@ -187,5 +188,57 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
+  }
+}
+
+@layer utilities {
+  .starry-gif {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.95) 1px, transparent 1px),
+      radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
+      radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(5,11,12,0.95), rgba(5,11,12,0.65));
+    background-size: 24px 24px, 48px 48px, 120px 120px, 100% 100%;
+    background-position: 0 0, 12px 12px, 30px 30px, 0 0;
+    opacity: 0.45;
+    animation: starfieldMove 30s linear infinite, starTwinkle 5s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+
+  .rainbow-text {
+    background: linear-gradient(90deg, #ff3d00, #ffcc00, #00ffb9, #00b4ff, #8b00ff);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbowShift 5s linear infinite;
+  }
+
+  @keyframes starfieldMove {
+    from {
+      background-position: 0 0, 12px 12px, 30px 30px, 0 0;
+    }
+    to {
+      background-position: -240px 200px, -120px 160px, -80px 120px, 0 0;
+    }
+  }
+
+  @keyframes starTwinkle {
+    0%, 100% {
+      opacity: 0.45;
+      filter: brightness(0.95);
+    }
+    50% {
+      opacity: 0.7;
+      filter: brightness(1.15);
+    }
+  }
+
+  @keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 }

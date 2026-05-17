@@ -20,11 +20,12 @@ export function Header() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[rgba(5,11,12,0.8)] border-b border-[#D4AF37]/30"
+      className="relative fixed top-0 left-0 right-0 z-50 overflow-hidden backdrop-blur-md bg-[rgba(5,11,12,0.8)] border-b border-[#D4AF37]/30"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
+      <div className="absolute inset-0 starry-gif pointer-events-none -z-10" />
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo & Avatar */}
@@ -44,8 +45,8 @@ export function Header() {
 
             {/* Name */}
             <div>
-              <h1 className="text-xl text-[#F5F2EB] tracking-wide">
-                Thiên Bảo
+              <h1 className="text-xl tracking-wide rainbow-text">
+                NGUYỄN TẤN THIÊN BẢO
               </h1>
               <p className="text-xs text-[#D4AF37]">Creative Designer</p>
             </div>

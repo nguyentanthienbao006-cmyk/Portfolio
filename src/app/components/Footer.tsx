@@ -11,6 +11,7 @@ export function Footer() {
 
   return (
     <footer id="footer-section" className="relative bg-[#050B0C] border-t border-[#D4AF37] py-12 overflow-hidden">
+      <div className="absolute inset-0 starry-gif pointer-events-none -z-10" />
       {/* Background wave pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 1440 200" preserveAspectRatio="none">
@@ -31,8 +32,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl mb-3 text-[#D4AF37]">
-              Thiên Bảo
+            <h3 className="text-2xl mb-3 rainbow-text">
+              NGUYỄN TẤN THIÊN BẢO
             </h3>
             <p className="text-[#E6DFD3] text-sm leading-relaxed">
               Modern Ukiyo-e Artist & Creative Designer
@@ -83,7 +84,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#D4AF37]/30 text-center">
           <p className="text-[#E6DFD3] text-sm">
-            © 2024-2027 Nguyễn Tấn Thiên Bảo. All rights reserved.
+            <span className="rainbow-text">NGUYỄN TẤN THIÊN BẢO</span> © 2024-2027. All rights reserved.
           </p>
           <p className="text-[#D4AF37] text-xs mt-2 italic">
             Designed with Modern Ukiyo-e aesthetics

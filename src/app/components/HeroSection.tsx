@@ -49,6 +49,43 @@ export function HeroSection() {
             </span>
           </motion.button>
         </motion.div>
+
+        <motion.div
+          className="mt-20 max-w-4xl mx-auto text-left rounded-3xl border border-[#D4AF37]/20 bg-[#050B0C]/80 px-6 py-8 shadow-[0_0_40px_rgba(212,175,55,0.08)] backdrop-blur-xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          <p className="text-[#D4AF37] text-sm uppercase tracking-[0.3em] mb-4">
+            Giới Thiệu Bản Thân
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#F5F2EB] mb-6">
+            🎨 Nguyễn Tấn Thiên Bảo – Sáng tạo có tư duy
+          </h2>
+
+          <div className="grid gap-6 text-[#E6DFD3] md:grid-cols-3">
+            <div className="space-y-3 rounded-3xl border border-[#D4AF37]/20 bg-[#0B1D20]/90 p-5">
+              <h3 className="text-xl text-[#D4AF37]">✨ Về tôi</h3>
+              <p className="leading-relaxed">
+                Sinh viên Đại học Gia Định, vừa học vừa làm. Tôi yêu thiết kế và dùng tư duy để tạo ra sản phẩm có chiều sâu.
+              </p>
+            </div>
+
+            <div className="space-y-3 rounded-3xl border border-[#D4AF37]/20 bg-[#0B1D20]/90 p-5">
+              <h3 className="text-xl text-[#D4AF37]">🧠 Năng lực</h3>
+              <p className="leading-relaxed">
+                Có hai bằng tiếng Anh Flyer & B2. Điểm mạnh: tư duy sáng tạo, thiết kế trực quan và học hỏi nhanh.
+              </p>
+            </div>
+
+            <div className="space-y-3 rounded-3xl border border-[#D4AF37]/20 bg-[#0B1D20]/90 p-5">
+              <h3 className="text-xl text-[#D4AF37]">❤️ Trải nghiệm</h3>
+              <p className="leading-relaxed">
+                Tôi thích dự án thực tế, làm việc tích cực và luôn tạo ra thiết kế bằng cảm xúc chân thật.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
 
     </section>
