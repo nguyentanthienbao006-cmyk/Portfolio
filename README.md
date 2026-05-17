@@ -7,7 +7,10 @@ Bạn vào các công cụ AI để tạo cho mình 1 Prompt giới thiệu bả
 
 
 <img width="736" height="1313" alt="image" src="https://github.com/user-attachments/assets/cd631c74-2032-4139-a939-b3b4b183b44f" />
+
+
 giống như thế này
+
 Sau đó hãy vào Figma để thực hiện demo ban đầu với Figma AI.
 
 
